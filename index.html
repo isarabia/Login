@@ -11,21 +11,20 @@
   </head>
   <body>
     <div class="box">
-      <h2>Login</h2>
+
+      <div class="header">
+        <img src="img/cefem.jpg" alt="Cefem" width="60px">
+        <h2 class="header__title">Cefem Pay</h2>
+      </div>
 
       <div class="button-box">
         <div id="btn"></div>
-        <button type="button" class="button-box__toggle-btn" onclick="login()">Log in</button>
-        <button type="button" class="button-box__toggle-btn" onclick="register()">Register</button>
+        <button type="button" class="button-box__toggle-btn" onclick="datos()">1.Datos</button>
+        <button type="button" class="button-box__toggle-btn" onclick="compra()">2.Compra</button>
+        <button type="button" class="button-box__toggle-btn" onclick="finalizar()">3.Finalizar</button>
       </div>
 
-      <div class="social-buttons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-
-      <form id="login" class="input-group">
+      <form id="datos" class="input-group">
         <div class="input-group__txtb">
           <input type="text">
           <span data-placeholder="Username"></span>
@@ -34,10 +33,44 @@
           <input type="password">
           <span data-placeholder="Password"></span>
         </div>
-        <input type="submit" class="submitbtn">
+        <input type="submit" onclick="compra()" class="submitbtn">
       </form>
       
-      <form id="register" class="input-group">
+      <form id="compra" class="input-group">
+        <div class="input-group__txtb">
+          <input type="text" list="pais">
+            <datalist id="pais">
+              <option value="Alemania" name="Alemania">Deutschland</option>
+              <option value="Austria" name="Austria">Österreich</option>
+              <option value="Bélgica" name="Belgica">België</option>
+              <option value="Bulgaria" name="Bulgaria">България</option>
+              <option value="Chipre" name="Chipre">Κύπρος</option>
+              <option value="Croacia" name="Croacia">Republika Hrvatska</option>
+              <option value="Dinamarca" name="Dinamarca">Danmark</option>
+              <option value="Eslovaquia" name="Eslovaquia">Slovensko</option>
+              <option value="Eslovenia" name="Eslovenia">Republika Slovenija</option>
+              <option value="España " name="España" selected="selected">España</option>
+              <option value="Estonia" name="Estonia">Eesti Vabariik</option>
+              <option value="Finlandia" name="Finlandia">Suomi</option>
+              <option value="Francia" name="Francia">France</option>
+              <option value="Grecia" name="ΕλGreciaλάδα">Ελλάδα</option>
+              <option value="Hungría" name="Hungria">Magyarország</option>
+              <option value="Irlanda" name="Irlanda">Ireland</option>
+              <option value="Italia" name="Italia">Repubblica Italiana</option>
+              <option value="Letonia" name="Letonia">Latvijas Republika</option>
+              <option value="Lituania" name="Lituania">Lietuvos Respublika</option>
+              <option value="Luxemburgo" name="Luxemburgo">Groussherzogtum Lëtzebuerg</option>
+              <option value="Malta" name="Malta">Repubblika ta' Malta</option>
+              <option value="Países Bajos" name="PaisesBajos">Nederland</option>
+              <option value="Polonia" name="Polonia ">Polska</option>
+              <option value="Portugal" name="Portugal">República Portuguesa</option>
+              <option value="Reino Unido" name="ReinoUnido">United Kingdom</option>
+              <option value="República Checa" name="RepublicaCheca">Česká republika</option>
+              <option value="Rumanía" name="Rumania">România</option>
+              <option value="Suecia" name="Suecia">Sverige</option>
+            </datalist>
+            <span class="country" data-placeholder="Country"></span>
+        </div>
         <div class="input-group__txtb">
           <input type="text">
           <span data-placeholder="Username"></span>
@@ -50,8 +83,27 @@
           <input type="password">
           <span data-placeholder="Password"></span>
         </div>
-        <input type="submit" class="submitbtn">
+        <input type="submit" onclick="finalizar()" class="submitbtn">
       </form>
+
+      <form id="finalizar" class="input-group">
+          <div class="input-group__txtb">
+            <input type="text">
+            <span data-placeholder="Ejemplo"></span>
+          </div>
+          <div class="input-group__txtb">
+            <input type="password">
+            <span data-placeholder="Ejemplo"></span>
+          </div>
+          <input type="submit" onclick="datos()" class="submitbtn">
+        </form>
+
+      <div class="social-buttons" id="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
     </div>
 
     <script src="js/line.js"></script>
