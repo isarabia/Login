@@ -25,18 +25,48 @@
       </div>
 
       <form id="datos" class="input-group">
+        <div class="menu">Accede con tus datos</div>
         <div class="input-group__txtb">
-          <input type="text">
-          <span data-placeholder="Username"></span>
+          <input type="text" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,16}">
+          <span data-placeholder="Usuario"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="password">
-          <span data-placeholder="Password"></span>
+          <input type="password" name="password" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*${8,32}">
+          <span data-placeholder="Contraseña"></span>
         </div>
         <input type="submit" onclick="compra()" class="submitbtn">
+        <br>
+
+        <div class="menu">Crea una cuenta</div>
+        <div class="input-group__txtb">
+          <input type="text"  name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,16}">
+          <span data-placeholder="Nombre"></span>
+        </div>
+        <div class="input-group__txtb">
+          <input type="text"  name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,16}">
+          <span data-placeholder="Apellidos"></span>
+        </div>
+        <div class="input-group__txtb">
+          <input type="email" name="email" pattern="[A-Za-z0-9!?-]@._{5,12}">
+          <span data-placeholder="Correo"></span>
+        </div>
+        <div type="submit" onclick="compra()" class="submitbtn">Enviar</div>
       </form>
       
       <form id="compra" class="input-group">
+        <div class="menu">Datos de envío</div>
+        <div class="input-group__txtb">
+          <input type="text">
+          <span data-placeholder="Dirección"></span>
+        </div>
+        <div class="input-group__txtb">
+          <input type="number">
+          <span data-placeholder="Código Postal"></span>
+        </div>
+        <div class="input-group__txtb">
+          <input type="text">
+          <span data-placeholder="Población"></span>
+        </div>
         <div class="input-group__txtb">
           <input type="text" list="pais">
             <datalist id="pais">
@@ -69,33 +99,33 @@
               <option value="Rumanía" name="Rumania">România</option>
               <option value="Suecia" name="Suecia">Sverige</option>
             </datalist>
-            <span class="country" data-placeholder="Country"></span>
+            <span class="country" data-placeholder="País"></span>
+        </div>
+
+        <div class="menu">Datos de pago</div>
+        <div class="input-group__txtb">
+          <input type="number">
+          <span data-placeholder="Nº de Tarjeta"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="text">
-          <span data-placeholder="Username"></span>
+          <input type="number">
+          <span data-placeholder="Caducidad"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="text">
-          <span data-placeholder="Email"></span>
-        </div>
-        <div class="input-group__txtb">
-          <input type="password">
-          <span data-placeholder="Password"></span>
+          <input type="number">
+          <span data-placeholder="Código CVV2"></span>
         </div>
         <input type="submit" onclick="finalizar()" class="submitbtn">
       </form>
 
       <form id="finalizar" class="input-group">
-          <div class="input-group__txtb">
-            <input type="text">
-            <span data-placeholder="Ejemplo"></span>
-          </div>
-          <div class="input-group__txtb">
-            <input type="password">
-            <span data-placeholder="Ejemplo"></span>
-          </div>
-          <input type="submit" onclick="datos()" class="submitbtn">
+        <div class="mensajeFinalizar">
+          <div class="mensajeFinalizarLn1">Gracias por su compra!</div>
+          <div class="mensajeFinalizarLn2">Referencia:</div>
+          <div id="salida" class="mensajeFinalizarLn3"></div><br>
+          <div class="mensajeFinalizarLn3">Ángel ya está preparando el pedido, se lo llevará a casa en las próximas 48h.</div>
+        </div>
+        <input type="submit" onclick="datos()" class="submitbtn">
         </form>
 
       <div class="social-buttons" id="social">
@@ -108,6 +138,7 @@
 
     <script src="js/line.js"></script>
     <script src="js/swap.js"></script>
+    <script src="random.js"></script>
 
   </body>
 </html>

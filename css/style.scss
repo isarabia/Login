@@ -24,7 +24,6 @@
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
-    /* height: 770px; */
     padding: 40px;
     background: rgba(0,0,0,.8);
     box-sizing: border-box;
@@ -46,6 +45,8 @@
     }
     .button-box {
         width: 300px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         margin: 60px auto 10px;
         position: relative;
         border-radius: 30px;
@@ -61,6 +62,9 @@
             position: relative;
             font-size:12px;
             letter-spacing: 1px;
+        }
+        &__toggle-btn:hover{
+            color: #ffad06;
         }
         #btn {
             top: 0;
@@ -79,6 +83,29 @@
         letter-spacing: 1px;
         width: 80%;
         transition: 0.8s;
+
+        .menu {
+            font-size: 19px;
+            color: #dbdada;
+            text-align: center;
+            margin: 50px auto 30px;
+        }
+        .mensajeFinalizar {
+            margin-top: 42px;
+            color: #fff;
+
+            &Ln1 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            &Ln2 {
+                margin-bottom: 30px;
+                
+            }
+            &Ln3 {
+                
+            }
+        }
 
     &__txtb{
         border-bottom: 2px solid #dbdada;
@@ -129,6 +156,8 @@
         }
     }
     .submitbtn{
+        width: 120px;
+        text-align: center;
         margin-top: 15%;
         margin-left: auto;
         margin-right: auto;
@@ -195,7 +224,7 @@
             -webkit-text-fill-color: transparent;
             transform: scale(2.0);
         }
-    }
+      }
     }
     #datos {
         left: 50px;
@@ -207,9 +236,39 @@
         left: 850px;
     }
     #social {
-        margin-top: 300px;
+        margin-top: 770px;
+        transition: 1s;
     }
     .country {
-    visibility: hidden;
+    /* visibility: hidden; */
     }
 }
+
+/* Eliminar estilos de input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+
+
+input:valid {
+    background-color: rgb(64, 161, 140);
+  }
+
+/*   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <i class="fa fa-check check-ok"></i>
+
+  .check-ok {
+    color: lime;
+  }
+   
+  input:invalid ~ .check-ok {
+    display: none;
+  }
+   
+  input:valid ~ .check-ok {
+    display: inline;
+  } */

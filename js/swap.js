@@ -9,19 +9,19 @@ function datos() {
     y.style.left = "450px";
     z.style.left = "0";
     v.style.left = "850px";
-    w.style.marginTop = "300px";
+    w.style.marginTop = "770px";
 }
 function compra() {
     x.style.left = "-400px";
     y.style.left = "50px";
     z.style.left = "90px";
     v.style.left = "450px";
-    w.style.marginTop = "600px";
+    w.style.marginTop = "800px";
 }
 function finalizar() {
     x.style.left = "-800px";
     y.style.left = "-450px";
     z.style.left = "200px";
     v.style.left = "50px";
-    w.style.marginTop = "300px";
+    w.style.marginTop = "360px";
 }
