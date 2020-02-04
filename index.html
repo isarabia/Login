@@ -34,7 +34,7 @@
           <input type="password" name="password" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*${8,32}">
           <span data-placeholder="Contraseña"></span>
         </div>
-        <input type="submit" onclick="compra()" class="submitbtn">
+        <div type="submit" onclick="compra()" class="submitbtn">Enviar</div>
         <br>
 
         <div class="menu">Crea una cuenta</div>
@@ -56,19 +56,19 @@
       <form id="compra" class="input-group">
         <div class="menu">Datos de envío</div>
         <div class="input-group__txtb">
-          <input type="text">
+          <input type="text" name="direccion" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,16}" required>
           <span data-placeholder="Dirección"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="number">
+          <input type="number" name="postal" pattern="[0-9]" minlength="4" maxlength="4" required>
           <span data-placeholder="Código Postal"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="text">
+          <input type="text" name="poblacion" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,16}" required>
           <span data-placeholder="Población"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="text" list="pais">
+          <input type="text" list="pais" required>
             <datalist id="pais">
               <option value="Alemania" name="Alemania">Deutschland</option>
               <option value="Austria" name="Austria">Österreich</option>
@@ -104,28 +104,27 @@
 
         <div class="menu">Datos de pago</div>
         <div class="input-group__txtb">
-          <input type="number">
+          <input type="number" name="NTarjeta" pattern="[0,9]" minlength="16" maxlength="16" required>
           <span data-placeholder="Nº de Tarjeta"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="number">
+          <input type="number"  name="caducidad" pattern="[0,9]" minlength="4" maxlength="4" required>
           <span data-placeholder="Caducidad"></span>
         </div>
         <div class="input-group__txtb">
-          <input type="number">
+          <input type="number"  name="cvv2" pattern="[0,9]" minlength="3" maxlength="3" required>
           <span data-placeholder="Código CVV2"></span>
         </div>
-        <input type="submit" onclick="finalizar()" class="submitbtn">
+        <div type="submit" onclick="finalizar()" class="submitbtn">Enviar</div>
       </form>
 
       <form id="finalizar" class="input-group">
         <div class="mensajeFinalizar">
           <div class="mensajeFinalizarLn1">Gracias por su compra!</div>
-          <div class="mensajeFinalizarLn2">Referencia:</div>
-          <div id="salida" class="mensajeFinalizarLn3"></div><br>
+          <div class="mensajeFinalizarLn2">Referencia: 978-8445073803</div>
           <div class="mensajeFinalizarLn3">Ángel ya está preparando el pedido, se lo llevará a casa en las próximas 48h.</div>
         </div>
-        <input type="submit" onclick="datos()" class="submitbtn">
+        <div type="submit" onclick="datos()" class="submitbtn">Volver</div>
         </form>
 
       <div class="social-buttons" id="social">
@@ -133,12 +132,10 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
-
     </div>
 
     <script src="js/line.js"></script>
     <script src="js/swap.js"></script>
-    <script src="random.js"></script>
 
   </body>
 </html>
